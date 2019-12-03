@@ -1,0 +1,31 @@
+:root{
+    --background-color: #0046be;
+}
+
+.nav-link {
+    color:white !important;
+}
+
+#navbar-container{
+    display: grid;
+    grid-template-areas:
+            "l l n n n n n n n n"
+            "l l n n n n n n n n"
+            "l l n n n n n n n n";
+    background-color: var(--background-color);
+}
+
+
+nav {
+    background-color: var(--background-color);
+}
+
+
+
+#navbar-logo {
+    grid-area: l;
+}
+#navbar {
+    grid-area: n;
+}
+
