@@ -1,31 +1,120 @@
 :root{
     --background-color: #0046be;
+    --border-color: rgb(73,118,230);
 }
-
-.nav-link {
-    color:white !important;
+body{
+    font-family: "arial";
 }
 
 #navbar-container{
     display: grid;
+    color: white;
     grid-template-areas:
-            "l l n n n n n n n n"
-            "l l n n n n n n n n"
-            "l l n n n n n n n n";
+            "l h h h h h h h h h h h h"
+            "l n n n n n n n n n n n n"
+            "m m m m m m m m m m m m m";
     background-color: var(--background-color);
 }
 
 
-nav {
-    background-color: var(--background-color);
+#navbar {grid-area: n;}
+#header {grid-area: h;}
+#logo-container {grid-area: l;}
+#menu-container {grid-area: m;}
+
+
+/* Logo */
+.navbar-logo {
+    color: white;
+    font-family: "Passion One", sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+    letter-spacing: .01em;
+}
+
+.navbar-logo{
+    line-height: .2em;
+}
+
+.navbar-localstore {
+    border-right: 1px solid var(--border-color);
+}
+
+/* Links */
+.nav-link {
+    color:white !important;
+}
+
+#menu-container {
+    border-top: 1px solid var(--border-color) ;
+}
+
+#searchBar {
+    width: 40vw;
 }
 
 
 
-#navbar-logo {
-    grid-area: l;
+#dropdown-products {
+    width: 1032px;
+    height: 310px;
 }
-#navbar {
-    grid-area: n;
+.dropdown-col-header {
+    color: rgb(85,85, 90);
+    font-weight: bold;
 }
+
+.dropdown-item-primary {
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(0, 70, 190);
+}
+.dropdown-item-sub {
+    font-size: 13px;
+    color: rgb(0, 70, 190);
+}
+
+.dropdown-item-icon {
+    height: 18px;
+}
+
+.dropdown-footer, .footer-link {
+    background-color: rgb(224, 230, 239);
+    color: rgb(85,86,90);
+    font-weight: bold;
+}
+.dropdown-menu {
+    padding: 0;
+}
+
+.dropdown-toggle {
+    font-weight: bold;
+}
+.leftMenu  .dropdown-toggle {
+    font-size: 20px;
+}
+.rightMenu  .dropdown-toggle {
+    font-size: 15px;
+}
+
+.dropdown-toggle::after {
+    content:none;
+}
+
+.show.dropdown.nav-item > .dropdown-toggle{
+    color: rgb(255,242,0) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
