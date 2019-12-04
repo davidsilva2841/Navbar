@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Navbar, Nav, Form, FormControl, NavDropdown} from 'react-bootstrap';
+import {NavDropdown} from 'react-bootstrap';
 
 class ShoppingHistory extends Component {
 

@@ -9,8 +9,9 @@ import Account from "./dropdowns/account";
 import ShoppingHistory from "./dropdowns/shoppingHistory";
 import OrderStatus from "./dropdowns/orderStatus";
 
-
 const Menu = () => {
+    // TODO: Add content to drop down items
+
     return (
         <Navbar id="menu-container" className="mt-1">
             <Nav className="mr-auto leftMenu">
