@@ -21,3 +21,7 @@
     
 ## How to use
 - Developing with webpack: npm start
+
+
+webpack -p --mode=production
+

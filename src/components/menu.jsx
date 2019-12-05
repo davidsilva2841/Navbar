@@ -25,6 +25,7 @@ const Menu = () => {
                 <Account/>
                 <ShoppingHistory/>
                 <OrderStatus/>
+                <Nav.Link href="/saved-items">Saved Items</Nav.Link>
             </Nav>
         </Navbar>
     )

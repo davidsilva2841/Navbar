@@ -1,6 +1,8 @@
 import React from "react";
 import {Navbar} from 'react-bootstrap';
 
+import logo from '../assets/logo.svg';
+
 const Logo = () => {
     return (
         <div id="logo-container">
@@ -10,7 +12,7 @@ const Logo = () => {
                 <img
                     alt=""
                     height="80"
-                    src="logo.svg"
+                    src={logo}
                 />
             </Navbar.Brand>
         </div>

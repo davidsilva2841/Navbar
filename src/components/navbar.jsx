@@ -1,6 +1,9 @@
 import React from "react";
 import {Navbar, Nav, Form} from 'react-bootstrap';
 
+import store from '../assets/store.svg';
+import cart from '../assets/cart.svg';
+
 const NavBar = () => {
     return (
         <Navbar id="navbar">
@@ -12,12 +15,20 @@ const NavBar = () => {
                 {/* TODO: Update logo */}
                 <img
                     height="40px"
-                    src="store.svg"
+                    src={store}
                     alt=""
                 />
 
                 {/* TODO: Add local store functionality */}
-                <Nav.Link href="/localstore" className="navbar-localstore">Austin, TX</Nav.Link>
+                <Nav.Link href="/localstore" style={{fontWeight: 'bold'}}>Austin, TX</Nav.Link>
+                <Nav.Link href="/localstore" className="navbar-localstore" style={{fontStyle: 'italic', fontSize: '13px'}}>Open till 9 pm</Nav.Link>
+
+                <img
+                    className="ml-2"
+                    height="40px"
+                    src={cart}
+                    alt=""
+                />
                 <Nav.Link href="/cart">Cart</Nav.Link>
             </Nav>
         </Navbar>
