@@ -6,7 +6,7 @@ class ShoppingHistory extends Component {
     render() {
         return (
             <NavDropdown title="Shopping History" className="menu-dropdown">
-                <div className="dropdown m-4" id="dropdown">
+                <div className="dropdown m-4 navbar-dropdown-menu" id="dropdown">
 
                 </div>
 

@@ -7,7 +7,7 @@ class Deals extends Component {
     render() {
         return (
             <NavDropdown title="Deals" className="menu-dropdown">
-                <div className="dropdown m-4" id="dropdown-deals">
+                <div className="dropdown m-4 navbar-dropdown-menu" id="dropdown-deals">
 
                 </div>
 

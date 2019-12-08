@@ -1,9 +1,7 @@
 # Navbar
 
-
 ## Description
 - Navbar component for westbuy
-
 
 ## Structure
 - Navbar is made up of 3 smaller navbars and the company logo
@@ -20,8 +18,8 @@
     - Contains: Products, Brands, Deals, Services, Account, Shopping History, Order Status, Saved Items
     
 ## How to use
-- Developing with webpack: npm start
+- Run live-server for development with webpack: npm start
 
 
-webpack -p --mode=production
+
 

@@ -15,7 +15,7 @@ class Products extends Component {
     render() {
         return (
             <NavDropdown title="Products" className="menu-dropdown">
-                <div className="dropdown m-4" id="dropdown-products">
+                <div className="dropdown m-4 navbar-dropdown-menu" id="dropdown-products">
                     <div className="row mb-4">
                         <div className="col dropdown-col-header">Featured</div>
                         <div className="col dropdown-col-header">All Categories</div>
