@@ -4,15 +4,20 @@ import {Navbar, Nav, Form} from 'react-bootstrap';
 import store from '../assets/store.svg';
 import cart from '../assets/cart.svg';
 
-const NavBar = () => {
+const NavBar = (props) => {
     return (
         <Navbar id="navbar">
             <Form inline>
                 {/* TODO: Add search bar features */}
-                <Form.Control type="text" placeholder="Search West Buy" className="mr-sm-2" id="searchBar" />
+                <Form.Control
+                    id="searchBar"
+                    onChange={props.onSearchChange}
+                    type="text"
+                    placeholder="Search West Buy"
+                    className="mr-sm-2"
+                />
             </Form>
             <Nav className="ml-auto">
-                {/* TODO: Update logo */}
                 <img
                     height="40px"
                     src={store}

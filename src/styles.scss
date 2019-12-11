@@ -63,11 +63,20 @@
         width: 1032px;
         height: 150px;
     }
+
+    #dropdown-deals {
+        width: 1032px;
+        height: 350px;
+    }
+
     .navbar-dropdown-menu {
         width: 1032px;
         height: 150px;
     }
 
+    #products-featured-col {
+        border-right: 1px solid rgb(197, 203, 213);
+    }
     .dropdown-col-header {
         color: rgb(85,85, 90);
         font-weight: bold;
@@ -127,5 +136,23 @@
     .dropdown-col-header.primary{
         border-right: 1px solid rgb(197, 203, 213);
     }
+
+    // Brands
+    .brands-image, .deals-image {
+        height: 93px;
+        width: 170px;
+        border: 1px solid rgb(221, 221, 226);
+    }
+
+    .deals-image {
+        padding: 10px;
+    }
+    .brand-name{
+        color: rgb(4,87,200);
+        font-size: 13px;
+        font-weight: bold;
+
+    }
+
 }
 

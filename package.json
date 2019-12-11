@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "webpack -d --watch & live-server --port=9000 --watch=dist --open=dist",
-        "build": "webpack -p --mode=production",
+        "start": "NODE_ENV=development webpack -d --watch & live-server --port=9000 --watch=dist --open=dist",
+        "build": "NODE_ENV=production webpack -p",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
