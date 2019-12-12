@@ -11,11 +11,4 @@ const Category = (title, logo, href) => {
 
 export default Category;
 
-const add = (num) => {
-	return num + 2;
-};
-
-const x = (y) => {
-    return y + 2;
-};
 

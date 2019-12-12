@@ -10,6 +10,15 @@ import cattle from "../../assets/cattle.svg";
 import farmSupplies from "../../assets/farmSupplies.svg";
 import hats from "../../assets/hats.svg";
 import cactus from "../../assets/cactus.svg";
+import rockSolidDeals from "../../assets/rockSolidDeals.svg";
+import luckyDeals from "../../assets/luckyDeals.svg";
+import explosiveDeals from "../../assets/explosiveDeals.svg";
+import smokinDeals from "../../assets/smokinDeals.svg";
+import litDeals from "../../assets/litDeals.svg";
+import premiumDeals from "../../assets/premiumDeals.svg";
+import cabins from "../../assets/cabins.svg";
+import prospecting from "../../assets/prospecting.svg";
+import homeDecor from "../../assets/homeDecor.svg";
 
 
 const getDeal = (title, image, href, details) => {
@@ -33,26 +42,26 @@ class Deals extends Component {
                     <div className="row">
                         <div className="col">
                             <div className="row">
-                                {getDeal('title', cactus, '/cactus', 'cactus')}
+                                {getDeal('Explosive Deals', explosiveDeals, '/cactus', 'cactus')}
                             </div>
                             <div className="row">
-                                {getDeal('title', westernWear, '/deal1', 'details')}
-                            </div>
-                        </div>
-                        <div className="col">
-                            <div className="row">
-                                {getDeal('title', westernWear, '/deal1', 'details')}
-                            </div>
-                            <div className="row">
-                                {getDeal('title', westernWear, '/deal1', 'details')}
+                                {getDeal('Rock Solid Deals', rockSolidDeals, '/deal1', 'details')}
                             </div>
                         </div>
                         <div className="col">
                             <div className="row">
-                                {getDeal('title', westernWear, '/deal1', 'details')}
+                                {getDeal('Lucky Deals', luckyDeals, '/deal1', 'details')}
                             </div>
                             <div className="row">
-                                {getDeal('title', westernWear, '/deal1', 'details')}
+                                {getDeal('Smokin\' Deals', smokinDeals, '/deal1', 'details')}
+                            </div>
+                        </div>
+                        <div className="col">
+                            <div className="row">
+                                {getDeal('Lit Deals', litDeals, '/deal1', 'details')}
+                            </div>
+                            <div className="row">
+                                {getDeal('Premium Deals', premiumDeals, '/deal1', 'details')}
                             </div>
                         </div>
                         <div className="col">
@@ -60,12 +69,15 @@ class Deals extends Component {
                             { Category('Western Wear', westernWear, '/western-wear') }
                             { Category('Horses', horses, '/horses') }
                             { Category('Guns', guns, '/guns') }
+                            {Category('Prospecting', prospecting, '/prospecting')}
+                            {Category('Home Decor', homeDecor, '/home-decor')}
                         </div>
                         <div className="col">
                             <div className="row"><br/> </div>
                             { Category('Cattle', cattle, '/cattle') }
                             { Category('Farm Supplies', farmSupplies, '/farm-supplies') }
                             { Category('Hats', hats, '/hats') }
+                            {Category('Cabins', cabins, '/cabins')}
                         </div>
                     </div>
                 </div>

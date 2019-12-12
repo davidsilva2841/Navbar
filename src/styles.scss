@@ -97,6 +97,7 @@
         height: 24px;
     }
 
+
     .dropdown-footer, .footer-link {
         background-color: rgb(224, 230, 239);
         color: rgb(85,86,90);
@@ -154,5 +155,26 @@
 
     }
 
+    #dropdown-services {
+        height: 250px;
+        width: 900px;
+        .title{
+            color: #55555a;
+            font-weight: bold;
+            font-size: 15px;
+            border-bottom: 1px solid rgb(197, 203, 213);
+            padding-bottom: 5px;
+        }
+        .link{
+            font-size: 13px;
+        }
+        #left-container {
+            border-right: 1px solid rgb(197, 203, 213);
+        }
+        #services-banner{
+            padding: 10px;
+        }
+
+    }
 }
 

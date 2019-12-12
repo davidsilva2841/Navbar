@@ -23,7 +23,7 @@ class Products extends Component {
             <NavDropdown title="Products" className="menu-dropdown">
                 <div className="dropdown m-4 navbar-dropdown-menu" id="dropdown-products">
                     <div className="row">
-                        <div className="col-2" id="products-featured-col">
+                        <div className="col-2 ml-4" id="products-featured-col">
                             <div className="row dropdown-col-header">Featured</div>
                             { featured('Yee-Haw Monday', '/yee-haw-monday') }
                             { featured('Western Deals', '/western-deals') }

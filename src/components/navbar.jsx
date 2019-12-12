@@ -1,5 +1,5 @@
 import React from "react";
-import {Navbar, Nav, Form} from 'react-bootstrap';
+import {Navbar, Nav, Form, InputGroup} from 'react-bootstrap';
 
 import store from '../assets/store.svg';
 import cart from '../assets/cart.svg';
@@ -14,7 +14,6 @@ const NavBar = (props) => {
                     onChange={props.onSearchChange}
                     type="text"
                     placeholder="Search West Buy"
-                    className="mr-sm-2"
                 />
             </Form>
             <Nav className="ml-auto">

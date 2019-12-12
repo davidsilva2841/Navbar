@@ -13,7 +13,7 @@ import wildHorses from '../../assets/wildHorses.svg';
 const getBrand = (title, image, href) => {
 	return (
         <div className="col text-center">
-            <img src={image} className="brands-image" alt="Logo"/>
+            <img src={image} className="brands-image p-2" alt="Logo"/>
             <a href={href} className="brand-name">{title}</a>
         </div>
     )

@@ -6,7 +6,7 @@ const ENTRY_FILE = './src/index.js';
 const config = {
     entry: ENTRY_FILE,
     output: {
-        filename: 'bundle.js',
+        filename: 'navbar-bundle.js',
         path: DIST_FOLDER,
     },
     resolve: {
