@@ -3,4 +3,4 @@ node_modules
 .vscode
 
 
-/tests/s3_uploader.js
+/s3_uploader.js

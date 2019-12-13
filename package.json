@@ -5,8 +5,9 @@
     "main": "index.js",
     "scripts": {
         "start": "NODE_ENV=development webpack -d --watch & live-server --port=9000 --watch=dist --open=dist",
+        "dev": "NODE_ENV=production webpack -d --watch & live-server --port=9000 --watch=dist --open=dist",
         "build": "NODE_ENV=production webpack -p",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "deploy": "NODE_ENV=production webpack -p && node s3_uploader.js"
     },
     "repository": {
         "type": "git",
@@ -21,6 +22,7 @@
     "homepage": "https://github.com/davidsilva2841/navbar#readme",
     "devDependencies": {
         "@babel/core": "^7.7.4",
+        "@babel/plugin-proposal-class-properties": "^7.7.4",
         "@babel/preset-env": "^7.7.4",
         "@babel/preset-react": "^7.7.4",
         "aws-sdk": "^2.585.0",

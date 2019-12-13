@@ -1,5 +1,5 @@
 #navbar-container {
-    $background-color: #0046be;
+    $blue-primary: #0046be;
     $border-color: rgb(73,118,230);
     font-family: "arial", sans-serif;
 
@@ -12,7 +12,7 @@
             "l h h h h h h h h h h h h"
             "l n n n n n n n n n n n n"
             "m m m m m m m m m m m m m";
-    background-color: $background-color;
+    background-color: $blue-primary;
 
     #navbar {grid-area: n;}
     #header {grid-area: h;}
@@ -33,6 +33,34 @@
         border-top: 1px solid $border-color ;
     }
 
+    #navbar {
+        #searchBar {
+            width: 40vw;
+        }
+
+        #search-list-container{
+            color: black;
+            position: absolute;
+            background-color: white;
+            height: 420px;
+            width: 40vw;
+            border: 1px solid rgb(197, 203, 213);
+            z-index: 10;
+            overflow: hidden;
+
+            .search-item {
+                font-size: 14px;
+                color: $blue-primary;
+                padding: 5px;
+
+            }
+            .search-item:hover {
+                text-decoration: none;
+                background-color: #D9E0EB;
+            }
+        }
+    }
+    /* ----------------------------------------------------------------------------------------------- */
     .navbar-logo {
         color: white;
         font-family: "Passion One", sans-serif;
@@ -50,10 +78,6 @@
 
     .navbar-localstore {
         border-right: 1px solid $border-color;
-    }
-
-    #searchBar {
-        width: 40vw;
     }
 
     /* ----------------------------------------------------------------------------------------------- */

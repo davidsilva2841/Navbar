@@ -17,8 +17,15 @@
     - Name: Menu
     - Contains: Products, Brands, Deals, Services, Account, Shopping History, Order Status, Saved Items
     
-## How to use
-- Run live-server for development with webpack: npm start
+## NPM commands
+- Run live-server for development with webpack (Requests sent to express api @ local host)
+    - npm start
+- Run live-server for development with webpack (Requests sent to express api @ deployed server)
+    - npm run dev
+- Compile in webpack (production mode)
+    - npm run build
+- Compile in webpack and upload to S3 (Requires s3_uploader.js -- see s3_uploader.example.js)
+    - npm run deploy
 
 
 
