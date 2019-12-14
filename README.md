@@ -1,7 +1,7 @@
 # Navbar
 
 ## Description
-- Navbar component for westbuy
+- Navbar component for West Buy
 
 ## Structure
 - Navbar is made up of 3 smaller navbars and the company logo

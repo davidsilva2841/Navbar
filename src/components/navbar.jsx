@@ -41,7 +41,7 @@ class NavBar extends Component {
                         src={ cart }
                         alt=""
                     />
-                    <Nav.Link href="/cart">Cart</Nav.Link>
+                    <Nav.Link href="/cart">Wagon</Nav.Link>
                 </Nav>
             </Navbar>
         );

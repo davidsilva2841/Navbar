@@ -9,18 +9,22 @@ class Account extends Component {
     render() {
         return (
             <React.Fragment>
-            <img
-                className="ml-2"
-                height="30px"
-                src={account}
-                alt=""
-            />
-            <NavDropdown title="Account" className="menu-dropdown">
-                <div className="dropdown m-4 navbar-dropdown-menu" id="dropdown">
+                <img
+                    className="ml-2"
+                    height="30px"
+                    src={account}
+                    alt=""
+                />
+                <NavDropdown title="Account" className="menu-dropdown">
+                    <div className="dropdown navbar-dropdown-menu" id="dropdown-account">
+                        <div className="row m-2" id="account-row">
+                            <div className="col-2">1</div>
+                            <div className="col-5">2</div>
+                            <div className="col-5">3</div>
+                        </div>
+                    </div>
 
-                </div>
-
-            </NavDropdown>
+                </NavDropdown>
             </React.Fragment>
         );
     }

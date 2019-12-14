@@ -51,6 +51,7 @@ class Products extends Component {
                         </div>
 
                     </div>
+                    {/*<Footer/>*/}
                 </div>
                 <Footer/>
             </NavDropdown>

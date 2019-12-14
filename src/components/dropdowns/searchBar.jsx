@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Navbar, Nav, Form } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 
 const axios = require('axios');
 
@@ -73,13 +73,21 @@ class SearchBar extends Component {
     }
 
 
-    renderSearchList() {
+    renderSearchList () {
         return (
             <div
                 id="search-list-container"
                 ref={ node => this.node = node }
-                className="col"
+                className="row"
             >
+                {this.renderSearchListItems()}
+                {this.renderSearchListImages()}
+            </div>
+        )
+    }
+    renderSearchListItems () {
+        return (
+            <div className="col">
                 {this.state.searchListData.map((item, index) => {
                     return <a href={'../' + item.ID} className="search-item row" key={`search-item-${index}`}>{item.Name}</a>
                 })}
@@ -87,18 +95,44 @@ class SearchBar extends Component {
         )
     }
 
+
+    renderSearchListImages () {
+        let {searchListData} = this.state;
+        searchListData = searchListData.slice(0,4);
+        return (
+            <div className="col p-2">
+                {searchListData.map((item, index) => {
+                    return (
+                            <div className="row p-3 search-list">
+                                <div className="col-4 text-center">
+                                    <img src={item.ImageURL} alt="" className="image"/>
+                                </div>
+                                <div className="col-8">
+                                    <a className="link" href={'../' + item.ID} key={`search-item-${index}`}>{item.Name}</a>
+                                </div>
+                            </div>
+                        )
+
+                })}
+            </div>
+        );
+    }
+
+
     render() {
         return (
             <Form inline>
                 <div className="col">
                     {/* Search bar */ }
-                    <Form.Control
-                        id="searchBar"
-                        onClick={ this.activateSearchList.bind(this) }
-                        onChange={ this.onSearchChange.bind(this) }
-                        type="text"
-                        placeholder="Search West Buy"
-                    />
+                    <div className="row">
+                        <Form.Control
+                            id="searchBar"
+                            onClick={ this.activateSearchList.bind(this) }
+                            onChange={ this.onSearchChange.bind(this) }
+                            type="text"
+                            placeholder="Search West Buy"
+                        />
+                    </div>
 
                     { ( this.state.searchActive ) ? this.renderSearchList() : '' }
                 </div>
