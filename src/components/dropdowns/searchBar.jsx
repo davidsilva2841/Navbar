@@ -21,6 +21,18 @@ class SearchBar extends Component {
         return axios.post(navbarProxy + '/api/search', {Name: productName});
     }
 
+    // getRatings () {
+    //     let {searchListData} = this.state;
+
+        // axios.get(`http://pi-stars.us-east-2.elasticbeanstalk.com/carousel/${id}`)
+        //     .then(result => {
+        //         console.log(`FILE: searchBar.jsx getRatings() | result: \n`, result);
+        //     })
+        //     .catch(error => {
+        //         console.error(`FILE: searchBar.jsx getRatings() | ERROR: \n`, error);
+        //     })
+    // }
+
     // --------------------------------------------------------------------------------------------------
     // Event listeners to close search list drop down when outside clicks
     componentWillMount() {
@@ -63,8 +75,8 @@ class SearchBar extends Component {
             .then(searchListData => {
                 console.log(`FILE: App.js () | searchListData: \n`, searchListData);
                 this.setState({searchListData: searchListData.data.slice(0,13)});
+                // this.getRatings();
                 this.activateSearchList();
-
             })
             .catch(error => {
                 console.log(`FILE: App.js () | ERROR: \n`, error);
@@ -72,19 +84,6 @@ class SearchBar extends Component {
 
     }
 
-
-    renderSearchList () {
-        return (
-            <div
-                id="search-list-container"
-                ref={ node => this.node = node }
-                className="row"
-            >
-                {this.renderSearchListItems()}
-                {this.renderSearchListImages()}
-            </div>
-        )
-    }
     renderSearchListItems () {
         return (
             <div className="col">
@@ -94,7 +93,6 @@ class SearchBar extends Component {
             </div>
         )
     }
-
 
     renderSearchListImages () {
         let {searchListData} = this.state;
@@ -118,6 +116,18 @@ class SearchBar extends Component {
         );
     }
 
+    renderSearchList () {
+        return (
+            <div
+                id="search-list-container"
+                ref={ node => this.node = node }
+                className="row"
+            >
+                {this.renderSearchListItems()}
+                {this.renderSearchListImages()}
+            </div>
+        )
+    }
 
     render() {
         return (

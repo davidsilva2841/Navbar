@@ -26,7 +26,7 @@ const getDeal = (title, image, href, details) => {
         <a href={ href } className="m-4">
             <img src={ image } className="deals-image row" alt="Logo"/>
             <div className="deals-title row">{ title }</div>
-            <div className="deals-details row">{ details }</div>
+            <div className="details row">{ details }</div>
         </a>
     )
 };
@@ -37,30 +37,30 @@ class Deals extends Component {
     render() {
         return (
             <NavDropdown title="Deals" className="menu-dropdown">
-                <div className="dropdown m-4 navbar-dropdown-menu" id="dropdown-deals">
-                    <div className="row">
+                <div className="dropdown navbar-dropdown-menu" id="dropdown-deals">
+                    <div className="row dropdown-content">
                         <div className="col">
                             <div className="row">
-                                { getDeal('Explosive Deals', explosiveDeals, '/cactus', 'cactus') }
+                                { getDeal('Explosive Deals', explosiveDeals, '/cactus', 'These deals will blow your mind!') }
                             </div>
                             <div className="row">
-                                { getDeal('Rock Solid Deals', rockSolidDeals, '/deal1', 'details') }
+                                { getDeal('Rock Solid Deals', rockSolidDeals, '/deal1', 'Solid deals') }
                             </div>
                         </div>
                         <div className="col">
                             <div className="row">
-                                { getDeal('Lucky Deals', luckyDeals, '/deal1', 'details') }
+                                { getDeal('Lucky Deals', luckyDeals, '/deal1', 'Feeling lucky today? Come check out these deals') }
                             </div>
                             <div className="row">
-                                { getDeal('Smokin\' Deals', smokinDeals, '/deal1', 'details') }
+                                { getDeal('Smokin\' Deals', smokinDeals, '/deal1', 'Hot deals, limited time only!') }
                             </div>
                         </div>
                         <div className="col">
                             <div className="row">
-                                { getDeal('Lit Deals', litDeals, '/deal1', 'details') }
+                                { getDeal('Lit Deals', litDeals, '/deal1', `Light up your world with these deals`) }
                             </div>
                             <div className="row">
-                                { getDeal('Premium Deals', premiumDeals, '/deal1', 'details') }
+                                { getDeal('Premium Deals', premiumDeals, '/deal1', 'Get those premium products for cheap') }
                             </div>
                         </div>
                         <div className="col">
@@ -71,7 +71,7 @@ class Deals extends Component {
                             { Category('Prospecting', prospecting, '/prospecting') }
                             { Category('Home Decor', homeDecor, '/home-decor') }
                         </div>
-                        <div className="col">
+                        <div className="col ml-2">
                             <div className="row"><br/></div>
                             { Category('Cattle', cattle, '/cattle') }
                             { Category('Farm Supplies', farmSupplies, '/farm-supplies') }
@@ -79,9 +79,9 @@ class Deals extends Component {
                             { Category('Cabins', cabins, '/cabins') }
                         </div>
                     </div>
+                <Footer/>
                 </div>
 
-                <Footer/>
             </NavDropdown>
         );
     }

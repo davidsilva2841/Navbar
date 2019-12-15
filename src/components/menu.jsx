@@ -10,6 +10,9 @@ import ShoppingHistory from "./dropdowns/shoppingHistory";
 import OrderStatus from "./dropdowns/orderStatus";
 
 
+import '../styles/menu.scss';
+import '../styles/dropdowns.scss';
+
 const Menu = () => {
     // TODO: Add content to drop down items
 

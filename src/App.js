@@ -5,7 +5,6 @@ import Header from "./components/header";
 import NavBar from "./components/navbar";
 import Menu from "./components/menu";
 
-
 class App extends Component {
     render () {
         return (

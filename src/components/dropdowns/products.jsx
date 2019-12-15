@@ -21,8 +21,8 @@ class Products extends Component {
     render() {
         return (
             <NavDropdown title="Products" className="menu-dropdown">
-                <div className="dropdown m-4 navbar-dropdown-menu" id="dropdown-products">
-                    <div className="row">
+                <div className="dropdown navbar-dropdown-menu" id="dropdown-products">
+                    <div className="row dropdown-content">
                         <div className="col-2 ml-4" id="products-featured-col">
                             <div className="row dropdown-col-header">Featured</div>
                             { featured('Yee-Haw Monday', '/yee-haw-monday') }
@@ -49,11 +49,9 @@ class Products extends Component {
                             { Category('Farm Supplies', farmSupplies, '/farm-supplies') }
                             { Category('Hats', hats, '/hats') }
                         </div>
-
                     </div>
-                    {/*<Footer/>*/}
-                </div>
                 <Footer/>
+                </div>
             </NavDropdown>
         );
     }

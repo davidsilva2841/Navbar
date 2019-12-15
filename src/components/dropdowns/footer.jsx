@@ -6,9 +6,8 @@ import priceMatch from '../../assets/priceMatch.svg';
 
 const Footer = () => {
     return (
-        <div className="dropdown-footer p-2">
-            <div className="row">
-
+        <div className="dropdown-footer-container container">
+            <div className="dropdown-footer row justify-content-md-center">
                 <div className="col text-center">
                     <img
                         className="m-2"
@@ -16,7 +15,7 @@ const Footer = () => {
                         src={shipping}
                         alt=""
                     />
-                    <a href="/price-match" className="footer-link">Free shipping on everything</a>
+                    <a href="/price-match" className="link">Free shipping on everything</a>
                 </div>
 
                 <div className="col text-center middle-footer">
@@ -26,7 +25,7 @@ const Footer = () => {
                         src={fastPickup}
                         alt=""
                     />
-                    <a href="/price-match" className="footer-link">Fast store pickup</a>
+                    <a href="/price-match" className="link">Fast store pickup</a>
                 </div>
 
                 <div className="col text-center">
@@ -36,7 +35,7 @@ const Footer = () => {
                         src={priceMatch}
                         alt=""
                     />
-                    <a href="/price-match" className="footer-link">Price Match Gaurantee</a>
+                    <a href="/price-match" className="link">Price Match Gaurantee</a>
                 </div>
             </div>
         </div>

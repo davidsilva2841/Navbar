@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import {NavDropdown} from 'react-bootstrap';
 
-class OrderStatus extends Component {
+import orderStatus from '../../assets/orderStatus.svg';
 
+class OrderStatus extends Component {
     render() {
         return (
             <NavDropdown title="Order Status" className="menu-dropdown">
-                <div className="dropdown m-4" id="dropdown">
-
+                <div className="dropdown navbar-dropdown-menu" id="dropdown-order-status">
+                    <div className="dropdown-content row m-2">
+                        <img src={orderStatus} alt="" className="icon m-2"/>
+                        <div className="title mb-1">Order Status</div>
+                    </div>
                 </div>
 
             </NavDropdown>

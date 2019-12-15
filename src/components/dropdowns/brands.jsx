@@ -23,18 +23,18 @@ class Brands extends Component {
     render() {
         return (
             <NavDropdown title="Brands" className="menu-dropdown">
-                <div className="dropdown m-4 navbar-dropdown-menu" id="dropdown">
-                    <div className="dropdown-col-header mb-2">Brand Shops</div>
-                    <div className="row">
+                <div className="dropdown navbar-dropdown-menu " id="dropdown">
+                    <div className="dropdown-col-header dropdown-content">Brand Shops</div>
+                    <div className="row mb-5">
                         {getBrand('West Bull', westBull, '/west-bull')}
                         {getBrand('Rodeo Wear', rodeoWear, '/rodeo-wear')}
                         {getBrand('Yee-Haw Gear', yeeHawGear, '/yee-haw-gear')}
                         {getBrand('Prospecting Pro', prospectingPro, '/prospecting-pro')}
                         {getBrand('Wild Horses', wildHorses, '/wild-horses')}
                     </div>
+                <Footer/>
                 </div>
 
-                <Footer/>
             </NavDropdown>
         );
     }
