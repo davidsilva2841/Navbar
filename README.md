@@ -27,6 +27,6 @@
 - Compile in webpack and upload to S3 (Requires s3_uploader.js -- see s3_uploader.example.js)
     - npm run deploy
 
-
+![Component](./documentation/Navbar.gif)
 
 

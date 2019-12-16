@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { Form } from 'react-bootstrap';
 
+import Stars from '../common/stars';
+import '../../assets/bby-stars.png';
+import '../../styles/searchStars.scss';
+
 const axios = require('axios');
 
 let navbarProxy;
@@ -13,7 +17,8 @@ class SearchBar extends Component {
 
         this.state = {
             searchActive: false,
-            searchListData: []
+            searchListData: [],
+            searchListReviews: {}
         };
     }
 
@@ -21,17 +26,25 @@ class SearchBar extends Component {
         return axios.post(navbarProxy + '/api/search', {Name: productName});
     }
 
-    // getRatings () {
-    //     let {searchListData} = this.state;
+    getRating (id) {
+        axios.get(`http://pi-stars.us-east-2.elasticbeanstalk.com/carousel/${id}`)
+            .then(result => {
+                let {searchListReviews} = this.state;
+                searchListReviews[id] = result.data.average_rating;
+                this.setState({searchListReviews});
+            })
+            .catch(error => {
+                console.error(`FILE: searchBar.jsx getRatings() | ERROR: \n`, error);
+            })
+    }
 
-        // axios.get(`http://pi-stars.us-east-2.elasticbeanstalk.com/carousel/${id}`)
-        //     .then(result => {
-        //         console.log(`FILE: searchBar.jsx getRatings() | result: \n`, result);
-        //     })
-        //     .catch(error => {
-        //         console.error(`FILE: searchBar.jsx getRatings() | ERROR: \n`, error);
-        //     })
-    // }
+    getRatings () {
+        let {searchListData} = this.state;
+        searchListData = searchListData.slice(0,4);
+
+        let ids = searchListData.map(item => {return item.ID});
+        ids.map(id => this.getRating(id));
+    }
 
     // --------------------------------------------------------------------------------------------------
     // Event listeners to close search list drop down when outside clicks
@@ -53,17 +66,12 @@ class SearchBar extends Component {
         }
     };
 
-    // Activate search drop down list
     activateSearchList () {
-        if (this.state.searchListData.length > 1){
-            this.setState({ searchActive: true });
-        }
+        (this.state.searchListData.length > 0) ? this.setState({ searchActive: true }) : this.setState({ searchActive: false });
     }
     // --------------------------------------------------------------------------------------------------
 
     onSearchChange(event) {
-        console.log(`FILE: searchBar.jsx onSearchChange() | this.state.searchActive: \n`, this.state.searchActive);
-
         if(event.target.value.length === 0) {
             this.setState({searchListData: []});
             this.activateSearchList();
@@ -73,9 +81,9 @@ class SearchBar extends Component {
 
         this.getProducts(event.target.value)
             .then(searchListData => {
-                console.log(`FILE: App.js () | searchListData: \n`, searchListData);
                 this.setState({searchListData: searchListData.data.slice(0,13)});
-                // this.getRatings();
+
+                this.getRatings();
                 this.activateSearchList();
             })
             .catch(error => {
@@ -86,9 +94,9 @@ class SearchBar extends Component {
 
     renderSearchListItems () {
         return (
-            <div className="col">
+            <div className="col m-2">
                 {this.state.searchListData.map((item, index) => {
-                    return <a href={'../' + item.ID} className="search-item row" key={`search-item-${index}`}>{item.Name}</a>
+                    return <a href={'../' + item.ID} className="search-item row mr-1" key={`search-item-${index}`}>{item.Name}</a>
                 })}
             </div>
         )
@@ -101,13 +109,15 @@ class SearchBar extends Component {
             <div className="col p-2">
                 {searchListData.map((item, index) => {
                     return (
-                            <div className="row p-3 search-list">
+                            <div className="row p-3 search-list" key={`search-list-item-${item.ID}`}>
                                 <div className="col-4 text-center">
                                     <img src={item.ImageURL} alt="" className="image"/>
                                 </div>
                                 <div className="col-8">
                                     <a className="link" href={'../' + item.ID} key={`search-item-${index}`}>{item.Name}</a>
+                                    <Stars productID={item.ID} searchListReviews={this.state.searchListReviews}/>
                                 </div>
+
                             </div>
                         )
 
