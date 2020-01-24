@@ -1,17 +1,17 @@
 #navbar-container {
     $blue-primary: #0046be;
-    $blue-border: rgb(73,118,230);
+    $blue-border: rgb(73, 118, 230);
     $grey-border: rgb(197, 203, 213);
     $dropdown-title-color: #55555a;
-
+    
     .navbar-dropdown-menu {
         width: 1032px;
         overflow: hidden;
     }
-
-    .dropdown-content{
+    
+    .dropdown-content {
         padding: 20px;
-
+        
     }
     .navbar-dropdown-menu {
         position: absolute;
@@ -19,10 +19,10 @@
         border: 1px solid $grey-border;
     }
     .dropdown-col-header {
-        color: rgb(85,85, 90);
+        color: rgb(85, 85, 90);
         font-weight: bold;
     }
-    #dropdown-shopping-history{
+    #dropdown-shopping-history {
         position: absolute;
         right: 1px;
         width: 800px;
@@ -46,7 +46,7 @@
             border-left: 1px solid rgb(197, 203, 213);
         }
     }
-
+    
     #dropdown-order-status {
         position: absolute;
         right: 1px;
@@ -66,14 +66,14 @@
             border-bottom: 1px solid rgb(197, 203, 213);
         }
     }
-
+    
     #dropdown-account {
         position: absolute;
         right: 1px;
         width: 800px;
         height: 250px;
-
-
+        
+        
         .button-container {
             display: flex;
             justify-content: space-around;
@@ -85,14 +85,14 @@
                 width: 200px;
             }
         }
-
+        
         .column-1 {
             border-right: 1px solid $grey-border;
             .row {
                 margin-top: 8px;
                 font-size: 13px;
             }
-
+            
         }
         .column-2 {
             border-right: 1px solid $grey-border;
@@ -106,7 +106,7 @@
                 background-color: $blue-primary;
                 color: white;
             }
-
+            
         }
         .column-3 {
             .button {
@@ -121,34 +121,34 @@
                 font-size: 13px;
             }
         }
-
-
+        
+        
     }
-
+    
     #dropdown-deals {
         .details {
             color: #1d252c;
             font-size: 14px;
         }
     }
-
+    
     #dropdown-services {
         width: 900px;
-        .title{
+        .title {
             color: #55555a;
             font-weight: bold;
             font-size: 15px;
             border-bottom: 1px solid rgb(197, 203, 213);
             padding-bottom: 5px;
         }
-        .link{
+        .link {
             font-size: 13px;
         }
         #left-container {
             border-right: 1px solid rgb(197, 203, 213);
         }
     }
-
+    
     .dropdown-footer-container {
         background-color: rgb(224, 230, 239);
         margin-top: 10px;
@@ -158,20 +158,20 @@
             padding: 10px 0 10px 0;
         }
         .link {
-            color: rgb(85,86,90);
+            color: rgb(85, 86, 90);
             font-weight: bold;
-            font-size: 15px !important;
+            font-size: 15px ;
         }
         .dropdown-footer {
-            @media (min-width: 900px) {
-                width: 900px;
-                margin: auto;
-            }
+            //@media (min-width: 900px) {
+            //    width: 900px;
+            //    margin: auto;
+            //}
         }
         .middle-footer {
             width: 50px !important;
         }
-        .dropdown-footer .middle-footer{
+        .dropdown-footer .middle-footer {
             border-left: 1px solid rgb(85, 85, 90);
             border-right: 1px solid rgb(85, 85, 90);
         }

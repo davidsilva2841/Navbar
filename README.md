@@ -7,21 +7,21 @@
 ## Structure
 - Navbar is made up of 3 smaller navbars and the company logo
 - Top navbar
-    - Name: Header
+    - src/components/header.jsx
     - Contains: Top Deals, Deal of the Day, Credit Cards, etc.
 
 - Middle navbar
-    - Name: Navbar
+    - src/components/navbar.jsx
     - Contains: Search bar, Local store, cart
 
-- Top navbar
-    - Name: Menu
+- Bottom navbar
+    - src/components/menu.jsx
     - Contains: Products, Brands, Deals, Services, Account, Shopping History, Order Status, Saved Items
     
 ## NPM commands
-- Run live-server for development with webpack (Requests sent to express api @ local host)
+- Run webpack-live-server for development with webpack (Requests sent to express api @ deployed server)
     - npm start
-- Run live-server for development with webpack (Requests sent to express api @ deployed server)
+- Run webpack-live-server for development with webpack (Requests sent to express api @ local host)
     - npm run dev
 - Compile in webpack (production mode)
     - npm run build

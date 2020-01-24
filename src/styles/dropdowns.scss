@@ -15,42 +15,42 @@
         font-size: 13px;
         color: rgb(0, 70, 190);
     }
-
+    
     .dropdown-item-icon {
         height: 24px;
     }
-
+    
     .dropdown-menu {
         padding: 0;
     }
-
-    .dropdown-menu.show{
+    
+    .dropdown-menu.show {
         border: 0;
     }
-    .leftMenu  .dropdown-toggle {
+    .leftMenu .dropdown-toggle {
         font-size: 20px;
     }
-    .rightMenu  .dropdown-toggle,
+    .rightMenu .dropdown-toggle,
     .rightMenu .nav-link {
         font-size: 15px;
         font-weight: bold;
     }
-
+    
     .dropdown-toggle {
         font-weight: bold;
     }
-
+    
     .leftMenu .dropdown-toggle::after {
         /* Removes down arrow from dropdown in navbar */
-        content:none;
+        content: none;
     }
-
-    .show.dropdown.nav-item > .dropdown-toggle{
-        color: rgb(255,242,0) !important;
+    
+    .show.dropdown.nav-item > .dropdown-toggle {
+        color: rgb(255, 242, 0) !important;
     }
-
-
-    .dropdown-col-header.primary{
+    
+    
+    .dropdown-col-header.primary {
         border-right: 1px solid rgb(197, 203, 213);
     }
 }

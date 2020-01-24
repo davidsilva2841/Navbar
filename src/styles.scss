@@ -7,48 +7,45 @@
         width: 1600px;
         margin: auto;
     }
-
+    
     $blue-primary: #0046be;
-    $blue-border: rgb(73,118,230);
+    $blue-border: rgb(73, 118, 230);
     $grey-border: rgb(197, 203, 213);
-
+    
     font-family: "arial", sans-serif;
     background-color: $blue-primary;
     /* ----------------------------------------------------------------------------------------------- */
     // Grid
-
+    
     display: grid;
     color: white;
-    grid-template-areas:
-            "l h h h h h h h h h h h h"
-            "l n n n n n n n n n n n n"
-            "m m m m m m m m m m m m m";
-
+    grid-template-areas: "l h h h h h h h h h h h h" "l n n n n n n n n n n n n" "m m m m m m m m m m m m m";
+    
     #navbar {grid-area: n;}
     #header {grid-area: h;}
     #logo-container {grid-area: l;}
     #menu-container {grid-area: m;}
-
+    
     /* ----------------------------------------------------------------------------------------------- */
-
+    
     #header .nav-link {
         font-size: 13px;
     }
-
+    
     #header .nav-link:hover {
         text-decoration: underline;
     }
-
+    
     #menu-container {
-        border-top: 1px solid $blue-border ;
+        border-top: 1px solid $blue-border;
     }
-
+    
     #navbar {
         #searchBar {
             width: 40vw;
         }
-
-        #search-list-container{
+        
+        #search-list-container {
             color: black;
             position: absolute;
             background-color: white;
@@ -57,7 +54,7 @@
             z-index: 1000000;
             overflow: hidden;
             padding: 5px;
-
+            
             .search-item {
                 font-size: 14px;
                 color: $blue-primary;
@@ -67,13 +64,13 @@
                 text-decoration: none;
                 background-color: #D9E0EB;
             }
-
+            
             .row.search-list {
                 border-left: 1px solid $grey-border;
             }
             .search-list {
-
-                .image{
+                
+                .image {
                     max-height: 75px;
                     max-width: 75px;
                     height: auto;
@@ -84,7 +81,7 @@
                     font-size: 14px;
                 }
             }
-
+            
         }
     }
     /* ----------------------------------------------------------------------------------------------- */
@@ -97,32 +94,31 @@
         line-height: .2em;
     }
     .nav-link {
-        color:white !important;
+        color: white !important;
     }
     .navbar-localstore {
         border-right: 1px solid $blue-border;
     }
-
+    
     #products-featured-col {
         border-right: 1px solid rgb(197, 203, 213);
     }
-
+    
     .brands-image, .deals-image {
         height: 93px;
         width: 170px;
         border: 1px solid rgb(221, 221, 226);
     }
-
+    
     .deals-image {
         padding: 10px;
     }
-    .brand-name{
-        color: rgb(4,87,200);
+    .brand-name {
+        color: rgb(4, 87, 200);
         font-size: 13px;
         font-weight: bold;
-
     }
-
-
+    
+    
 }
 
